@@ -1,0 +1,15 @@
+1 tab = 2 spaces
+
+shortest sequence of white space is a space
+input:  "\t  \s 'asd' \s    "
+output: "\s     'asd' \s    "
+
+shortest sequence of white space is a tab
+input:  "\t  \s 'xxx' \s\t\t 'xx' \t   'x'"
+output: "\s\s   'xxx' \s\s   'xx' \s\s 'x'"
+
+1. Get length of input.
+2. Count blanks.
+3. Calculate blank-stop.
+4. Calculate new buffer size.
+5. Copy data into new buffer replacing blanks with blank-stop.

@@ -1,0 +1,12 @@
+max_line_length = 10
+input:  "This is a sentence. It needs to be folded."
+output: "This is a<br>sentence.<br>It needs<br>to be<br>folded."
+
+max_line_length = 30
+input:  "This is a realy long sentence... You Understand? So, it needs to be folded into lines 20 chars long at most. Now do, bitch! Yeeeeeeeaaaaaah!"
+output: "This is a realy long<br>sentence... You Understand?<br>So, it needs to be folded into<br>lines 20 chars long at most.<br>Now do, bitch!<br>Yeeeeeeeaaaaaah!"
+
+1. Parse input and count how many folded lines it will be based on column length.
+2. Calculate new buffer size.
+3. Calculate blank-stop.
+5. Copy data into new buffer replacing blanks with blank-stop.
